@@ -1,30 +1,44 @@
 import { Component } from "react";
 
-class ClassEvent extends Component{
+class ClassEvent extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
             count: 0,
         };
+
+        // Remember to bind functions to this if not using function()=>{} when declare
+        // this.increment = this.increment.bind(this)
     }
-    increment(){
+
+    increment() {
         this.setState({
             count: this.state.count + 1,
         });
     }
 
-    handleClick(){
+
+    // Declaration in the way of function()=>{}
+    // increment = () => {
+    //     this.setState({
+    //         count: this.state.count + 1,
+    //     });
+    // }
+
+    handleClick() {
         console.log("Class event");
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <p>Class Event</p>
                 <button onClick={this.handleClick}>Click here</button>
                 <p>Count value: {this.state.count}</p>
-                <button onClick={()=>this.increment()}>Counter</button>
+                {/* Even though not binding in the constructor
+                We can still use ()=>this.function() when calling it*/}
+                <button onClick={() => this.increment()}>Counter</button>
             </div>
         );
     }

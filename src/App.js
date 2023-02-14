@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Hello from './components/Hello';
 import Message from './components/Message';
@@ -7,6 +6,9 @@ import Resume from './components/Resume';
 import FunctionEvent from './components/FunctionEvent';
 import ClassEvent from './components/ClassEvent';
 import ConditionalComponent from './components/ConditionalComponent';
+import Product from './components/Product';
+import Form from './components/Form';
+import Todo from './components/Todo';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
       <FunctionEvent/>
       <ClassEvent/>
       <ConditionalComponent></ConditionalComponent>
+      <Product/>
+      <Form/>
+      <Todo/>
     </div>
   );
 }

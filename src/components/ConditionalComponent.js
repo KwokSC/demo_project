@@ -4,24 +4,25 @@ export default function ConditionalComponent() {
 
     const [display, setDisplay] = useState(true);
 
-    function handleClick(){
+    let output;
+
+    function handleClick() {
         setDisplay(!display)
     }
 
-    if (display) {
-        return (
-            <div>
-                <h3>This is a ConditionalComponent</h3>
-                <button onClick={handleClick}>Click to change text</button>
-            </div>
-        )
-    } else {
-        return (
-            <div>
-                <h3>Nothing to see here</h3>
-                <button onClick={handleClick}>Click to change text</button>
-            </div>
-        )
-    }
+    // if (display) {
+    //     output = <h3>This is a ConditionalComponent</h3>
+    // } else {
+    //     output = <h3>Nothing to see here</h3>
+    // }
 
+    output = display?<h3>This is a ConditionalComponent</h3>:<h3>Nothing to see here</h3>
+
+    return (
+        <div>
+            {output}
+            <button onClick={handleClick}>Click here to change the text</button>
+        </div>
+
+    );
 }
