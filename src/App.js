@@ -6,9 +6,10 @@ import Resume from './components/Resume';
 import FunctionEvent from './components/FunctionEvent';
 import ClassEvent from './components/ClassEvent';
 import ConditionalComponent from './components/ConditionalComponent';
-import Product from './components/Product';
 import Form from './components/Form';
 import Todo from './components/Todo';
+import ShoppingCart from './components/ShoppingCart';
+import InlineComponent from './components/InlineComponent';
 
 function App() {
   return (
@@ -21,13 +22,14 @@ function App() {
         <p>This is my profile</p>
       </Profile>
       <Message messagecode = "10" messagecontent = "This is a message from props"/>
-      <Resume name = "Chunkie"/>
+      <Resume name = "Chunkie" age = "25"/>
       <FunctionEvent/>
       <ClassEvent/>
       <ConditionalComponent></ConditionalComponent>
-      <Product/>
+      <ShoppingCart/>
       <Form/>
       <Todo/>
+      <InlineComponent/>
     </div>
   );
 }
