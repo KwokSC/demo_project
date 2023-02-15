@@ -10,6 +10,7 @@ import Form from './components/Form';
 import Todo from './components/Todo';
 import ShoppingCart from './components/ShoppingCart';
 import InlineComponent from './components/InlineComponent';
+import StyleSheetComponenet from './components/StyleSheetComponent';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Form/>
       <Todo/>
       <InlineComponent/>
+      <StyleSheetComponenet/>
     </div>
   );
 }

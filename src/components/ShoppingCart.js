@@ -38,7 +38,7 @@ class ShoppingCart extends Component {
             <table>
                 <thead>
                     <tr>
-                        <th>No.</th>
+                        <th>No</th>
                         <th>Name</th>
                         <th>Date</th>
                         <th>Price</th>
@@ -82,7 +82,10 @@ class ShoppingCart extends Component {
     render() {
         const { books } = this.state
 
-        return books.length ? this.renderBookList() : this.renderBookEmpty()
+        return (<div>
+            <h1>Shopping Cart</h1>
+            {books.length ? this.renderBookList() : this.renderBookEmpty()}
+        </div>)
     }
 }
 
