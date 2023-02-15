@@ -1,4 +1,4 @@
-import { Component } from "react"
+import { Component, Fragment } from "react"
 
 class ShoppingCart extends Component {
 
@@ -34,7 +34,7 @@ class ShoppingCart extends Component {
     renderBookList() {
         const { books } = this.state
 
-        return <div>
+        return <Fragment>
             <table>
                 <thead>
                     <tr>
@@ -72,7 +72,7 @@ class ShoppingCart extends Component {
                 </tbody>
             </table>
             <h2>Total Price: {this.getTotalPrice()}</h2>
-        </div>
+        </Fragment>
     }
     // Shopping cart is empty
     renderBookEmpty() {
