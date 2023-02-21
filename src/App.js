@@ -12,6 +12,10 @@ import ShoppingCart from './components/ShoppingCart';
 import InlineComponent from './components/InlineComponent';
 import FragmentComponent from './components/FragmentComponent';
 import Table from './components/Table';
+import Parent from './components/Parent';
+import PopWindow from './components/PopWindow';
+import RefsDemo from './components/RefsDemo';
+import SideEffect from './components/SideEffect';
 
 function App() {
   return (
@@ -34,6 +38,10 @@ function App() {
       <InlineComponent/>
       <FragmentComponent/>
       <Table/>
+      <Parent/>
+      <PopWindow/>
+      <RefsDemo/>
+      <SideEffect/>
     </div>
   );
 }
