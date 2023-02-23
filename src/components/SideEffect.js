@@ -8,6 +8,13 @@ export default function SideEffect(){
     // and the parameter status change
     let[resourceType, setResourceType] = useState('Home');
 
+    // This function will be called every time when the button is clicked
+    // But sometimes we click the same button and the state won't change
+    // This will degrade performance
+    // function resourceTypeHandler(resourceType){
+    //     setResourceType(resourceType);
+    // }
+
     // useEffect will only be called whenever the parameter(s) change
     // It can bind with several parameters inside the []
     useEffect(()=>{console.log(resourceType)},[resourceType])

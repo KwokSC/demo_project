@@ -16,6 +16,8 @@ import Parent from './components/Parent';
 import PopWindow from './components/PopWindow';
 import RefsDemo from './components/RefsDemo';
 import SideEffect from './components/SideEffect';
+import ReducerHook from './components/ReducerHook';
+import ParentCon from './components/context/ParentCon'
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
       <PopWindow/>
       <RefsDemo/>
       <SideEffect/>
+      <ReducerHook/>
+      <ParentCon/>
     </div>
   );
 }
