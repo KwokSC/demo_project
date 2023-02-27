@@ -11,7 +11,7 @@ import Todo from './components/Todo';
 import ShoppingCart from './components/ShoppingCart';
 import FragmentComponent from './components/FragmentComponent';
 import Table from './components/Table';
-import Parent from './components/memo/Parent';
+import Parent from './components/memo&callback/Parent';
 import PopWindow from './components/PopWindow';
 import RefsDemo from './components/RefsDemo';
 import SideEffect from './components/SideEffect';

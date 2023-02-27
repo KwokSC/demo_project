@@ -2,7 +2,7 @@ import { memo } from "react"
 
 function Child({count, changeChildCount}) {
 
-    console.log('Child component is being rerendered')
+    console.log('The child component is being re-rendered')
 
     return (
         <div>
