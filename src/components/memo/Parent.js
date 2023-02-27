@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Child from "./Child";
 
 
@@ -11,18 +11,21 @@ export default function Parent() {
         setParentCount(parentCount+1)
     }
 
-    function changeChildCount(){
+    // To pass reference variables to memory to improve performance
+    // useCallback can help reduce re-rendering of children's internal functions
+    // If functions include any parameters that are outside themselves
+    // Include the outside parameters in the [] array
+    const changeChildCount = useCallback(function(){
         setChildCount(childCount+1)
-    }
+    }, [setChildCount, childCount])
 
     return (
 
         <div>
             <h1>This is a parent component</h1>
             <h3>Parent count is: {parentCount}</h3>
-            <Child count={childCount}></Child>
             <button onClick={changeParentCount}>Add parent count</button>
-            <button onClick={changeChildCount}>Add child count</button>
+            <Child count={childCount} changeChildCount={changeChildCount}></Child>
         </div>
 
     )

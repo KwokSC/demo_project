@@ -9,10 +9,9 @@ import ConditionalComponent from './components/ConditionalComponent';
 import Form from './components/Form';
 import Todo from './components/Todo';
 import ShoppingCart from './components/ShoppingCart';
-import InlineComponent from './components/InlineComponent';
 import FragmentComponent from './components/FragmentComponent';
 import Table from './components/Table';
-import Parent from './components/Parent';
+import Parent from './components/memo/Parent';
 import PopWindow from './components/PopWindow';
 import RefsDemo from './components/RefsDemo';
 import SideEffect from './components/SideEffect';
@@ -37,7 +36,6 @@ function App() {
       <ShoppingCart/>
       <Form/>
       <Todo/>
-      <InlineComponent/>
       <FragmentComponent/>
       <Table/>
       <Parent/>
