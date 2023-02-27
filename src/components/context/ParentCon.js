@@ -1,16 +1,17 @@
 import AuthContext from "./AuthContext";
 import ChildCon from "./ChildCon";
-import {useState} from 'react'
+import { useContext } from 'react'
 
-export default function ParentCon(){
+export default function ParentCon() {
 
-    const [isLoggedIn, setLoggedIn] = useState(false)
+    let context = useContext(AuthContext)
 
-    return(
-        <AuthContext.Provider value={{isLoggedIn:isLoggedIn}}>
-            <h1>The login status in the parent container is {isLoggedIn+''}</h1>
-            <ChildCon/>
-            <button onClick={()=>setLoggedIn(!isLoggedIn)}>Change Context</button>
-        </AuthContext.Provider>
+    return (
+        <div>
+            <h1>The login status in the parent container is {context.isLoggedIn + ''}</h1>
+            <ChildCon />
+            <button onClick={context.onLogin}>Login</button>
+            <button onClick={context.onLogout}>Logout</button>
+        </div>
     )
 }
